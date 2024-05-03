@@ -1,0 +1,66 @@
+\documentclass[a4paper,skipsamekey,11pt,english]{curve}
+
+% Most commands and style definitions are in settings.sty.
+\usepackage{settings}
+
+% Change the fonts if you want
+\ifxetexorluatex % If you're using XeLaTeX or LuaLaTeX
+  \usepackage{fontspec} 
+  %% You can use \setmainfont etc; I'm just using these font packages here because they provide OpenType fonts for use by XeLaTeX/LuaLaTeX anyway
+  \usepackage[p,osf,swashQ]{cochineal}
+  \usepackage[medium,bold]{cabin}
+  \usepackage[varqu,varl,scale=0.9]{zi4}
+\else % If you're using pdfLaTeX or latex
+  \usepackage[T1]{fontenc}
+  \usepackage[p,osf,swashQ]{cochineal}
+  \usepackage{cabin}
+  \usepackage[varqu,varl,scale=0.9]{zi4}
+\fi
+
+% Margins
+\geometry{left=1cm,right=1cm,top=1cm,bottom=1cm}
+
+% Colors
+\definecolor{SwishLineColour}{HTML}{940606}
+\definecolor{MarkerColour}{HTML}{cf0404}
+
+% Prefix for items
+% \prefixmarker{$\diamond$}
+
+\includecomment{fullonly}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\leftheader{%
+  {\LARGE\bfseries\sffamily Mario Šomođi, B.Comp.Eng.}
+
+  \begin{tabular}{@{}lll}
+     \makefield{\faEnvelope[regular]}{\href{mailto:mario0.0somodi@gmail.com}{\texttt{mario0.0somodi@gmail.com}}}
+     & \makefield{\faGithub}{\href{https://github.com/MarioSomodi}{\texttt{@MarioSomodi}}}
+     & \makefield{\faLinkedin}{\href{https://www.linkedin.com/in/mario-somodi/}{\texttt{@mario-somodi}}} \\
+     \makefield{\faPhone[regular]}{\texttt{(385) 97 608 5936}} &
+      \makefield{\faMapPin}{\texttt{Zagreb, Croatia}}
+  \end{tabular}
+}
+
+\rightheader{~}
+\begin{fullonly}
+\photo[r]{photo}
+\photoscale{0.2}
+\end{fullonly}
+
+\title{Curriculum Vitae}
+
+\begin{document}
+\makeheaders[c]
+
+\makerubric{employment}
+\makerubric{education}
+
+\makerubric{skills}
+
+% \makerubric{referee}
+% \input{referee-full}
+
+\end{document}
